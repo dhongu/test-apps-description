@@ -5,7 +5,7 @@
     "author": "Terrabit, Dorin Hongu",
     "license": "LGPL-3",
     "website": "https://www.terrabit.ro",
-    "category": "Hidden",
+    "category": "Extra Tools",
     "depends": ["base"],
     "data": [],
     "development_status": "Alpha",
