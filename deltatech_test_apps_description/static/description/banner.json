@@ -1,0 +1,6 @@
+{
+  "title": "Test Apps Description",
+  "summary": "What the Odoo Apps page keeps and strips",
+  "features": ["SVG banner as the main image", "Animated count served by terrabit.ro", "Inline SVG, CSS, iframe and script"],
+  "module_icon": true
+}
