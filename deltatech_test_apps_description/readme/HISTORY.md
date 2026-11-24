@@ -1,3 +1,7 @@
+## 19.0.1.0.2
+
+- Main image back to PNG: Odoo Apps did not take the SVG banner as the main image.
+
 ## 19.0.1.0.1
 
 - Test: Terrabit banner in SVG as the main image (`images` in the manifest); the PNG stays next to it.
