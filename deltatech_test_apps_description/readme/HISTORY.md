@@ -1,3 +1,7 @@
+## 19.0.1.0.3
+
+- Usage tab (`readme/USAGE.md`) with the results so far, a Documentation tab (`doc/index.rst`) and a License tab (`LICENSE`, LGPL-3), to test how Odoo Apps renders them.
+
 ## 19.0.1.0.2
 
 - Main image back to PNG: Odoo Apps did not take the SVG banner as the main image.

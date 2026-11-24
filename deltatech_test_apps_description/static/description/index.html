@@ -32,6 +32,11 @@
        style="padding:10px 22px;"><span class="fa fa-star" style="margin-right:6px;" aria-hidden="true"></span>Overview</a>
   </li>
   <li class="nav-item mx-1 mb-2">
+    <a class="nav-link fw-semibold rounded-pill border" id="tb-tab-usage"
+       data-bs-toggle="pill" data-bs-target="#tb-panel-usage" href="#tb-panel-usage"
+       style="padding:10px 22px;"><span class="fa fa-book" style="margin-right:6px;" aria-hidden="true"></span>Usage</a>
+  </li>
+  <li class="nav-item mx-1 mb-2">
     <a class="nav-link fw-semibold rounded-pill border" id="tb-tab-versions"
        data-bs-toggle="pill" data-bs-target="#tb-panel-versions" href="#tb-panel-versions"
        style="padding:10px 22px;"><span class="fa fa-history" style="margin-right:6px;" aria-hidden="true"></span>Versions</a>
@@ -57,8 +62,76 @@ modules, SVG and GIF), inline SVG with animation, CSS animation, and the element
 <div class="col-md-6 col-lg-4"><div class="border rounded-3 p-3 h-100 text-center"><div class="fw-bold mb-1" style="color:#212529;">8. script</div><div class="mb-2" style="font-size:13px;color:#3d4752;">Expected: stripped; this text stays as it is</div><div class="d-flex align-items-center justify-content-center" style="min-height:60px;"><span id="tb-script-test">[8] the script did not run</span><script>document.getElementById("tb-script-test").textContent="[8] the script RAN";</script></div></div></div>
 </div>
 </div>
+<div class="tab-pane fade py-2" id="tb-panel-usage" style="font-size:16px;line-height:1.65;color:#212529;font-weight:400;">
+<div class="mb-2"><span class="d-inline-block rounded-pill fw-bold text-uppercase" style="background-color:#DEF1DD;color:#006F42;padding:5px 14px;font-size:12px;letter-spacing:0.14em;"><span class="fa fa-book" style="margin-right:6px;" aria-hidden="true"></span>Usage</span></div>
+<p>This module has no menus and nothing to use in Odoo: it only exists for its page on Odoo Apps.
+How to read the page:</p>
+<ol>
+<li>Open the <strong>Overview</strong> tab and go to <strong>Rendering test matrix</strong>.</li>
+<li>Each card names one technique and what we expect from the store.</li>
+<li>A card where the text in brackets appears, or that stays empty, is a technique the store
+   strips. A card that shows the animated <strong>800+</strong> is a technique the store keeps.</li>
+<li>The <strong>Documentation</strong> tab comes from <code class="border rounded px-2" style="font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:13px;">doc/index.rst</code> (headings, lists, admonitions, code,
+   table, images). The <strong>License</strong> tab comes from the <code class="border rounded px-2" style="font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:13px;">LICENSE</code> file of the module (LGPL-3).</li>
+</ol>
+<h3 class="fw-bold mt-4 mb-3" style="border:none;border-left-width:4px;border-left-style:solid;border-left-color:#57B952;padding-left:16px;font-size:19px;letter-spacing:-0.3px;line-height:1.2;">Results on Odoo 19.0 (24 November 2026)</h3>
+<table class="table table-bordered" style="font-size:14px;">
+<thead>
+<tr>
+<th>Case</th>
+<th>Technique</th>
+<th>On Odoo Apps</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1, 2</td>
+<td>SVG and GIF from terrabit.ro</td>
+<td>kept</td>
+</tr>
+<tr>
+<td>3, 4</td>
+<td>SVG and GIF from the module</td>
+<td>kept</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Inline SVG with SMIL</td>
+<td>stripped</td>
+</tr>
+<tr>
+<td>6</td>
+<td>CSS <code class="border rounded px-2" style="font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:13px;">@keyframes</code></td>
+<td>text kept</td>
+</tr>
+<tr>
+<td>7</td>
+<td>iframe</td>
+<td>stripped</td>
+</tr>
+<tr>
+<td>8</td>
+<td>script</td>
+<td>not run</td>
+</tr>
+<tr>
+<td>&#8212;</td>
+<td>SVG as the main image (<code class="border rounded px-2" style="font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:13px;">images</code>)</td>
+<td>not accepted, PNG used</td>
+</tr>
+</tbody>
+</table>
+</div>
 <div class="tab-pane fade py-2" id="tb-panel-versions" style="font-size:16px;line-height:1.65;color:#212529;font-weight:400;">
 <div class="mb-2"><span class="d-inline-block rounded-pill fw-bold text-uppercase" style="background-color:#DEF1DD;color:#006F42;padding:5px 14px;font-size:12px;letter-spacing:0.14em;"><span class="fa fa-history" style="margin-right:6px;" aria-hidden="true"></span>Versions</span></div>
+<h2 class="mt-5 mb-3" style="border:none;font-family:'Caveat',Georgia,'Times New Roman',serif;font-weight:700;color:#006F42;font-size:36px;line-height:1.1;letter-spacing:0;"><span style="display:inline-block;padding:0 6px;white-space:nowrap;background-image:url(https://apps.odoo.com/openerp_website/static/src/img/highlights/green_highlight_03.svg);background-position:center 75%;background-repeat:no-repeat;background-size:100% 60%;">19.0.1.0.3</span></h2>
+<ul>
+<li>Usage tab (<code class="border rounded px-2" style="font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:13px;">readme/USAGE.md</code>) with the results so far, a Documentation tab (<code class="border rounded px-2" style="font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:13px;">doc/index.rst</code>) and a License tab (<code class="border rounded px-2" style="font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:13px;">LICENSE</code>, LGPL-3), to test how Odoo Apps renders them.</li>
+</ul>
+<h2 class="mt-5 mb-3" style="border:none;font-family:'Caveat',Georgia,'Times New Roman',serif;font-weight:700;color:#006F42;font-size:36px;line-height:1.1;letter-spacing:0;"><span style="display:inline-block;padding:0 6px;white-space:nowrap;background-image:url(https://apps.odoo.com/openerp_website/static/src/img/highlights/green_highlight_03.svg);background-position:center 75%;background-repeat:no-repeat;background-size:100% 60%;">19.0.1.0.2</span></h2>
+<ul>
+<li>Main image back to PNG: Odoo Apps did not take the SVG banner as the main image.</li>
+</ul>
 <h2 class="mt-5 mb-3" style="border:none;font-family:'Caveat',Georgia,'Times New Roman',serif;font-weight:700;color:#006F42;font-size:36px;line-height:1.1;letter-spacing:0;"><span style="display:inline-block;padding:0 6px;white-space:nowrap;background-image:url(https://apps.odoo.com/openerp_website/static/src/img/highlights/green_highlight_03.svg);background-position:center 75%;background-repeat:no-repeat;background-size:100% 60%;">19.0.1.0.1</span></h2>
 <ul>
 <li>Test: Terrabit banner in SVG as the main image (<code class="border rounded px-2" style="font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:13px;">images</code> in the manifest); the PNG stays next to it.</li>
